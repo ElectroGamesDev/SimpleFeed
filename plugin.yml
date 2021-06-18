@@ -1,0 +1,17 @@
+---
+name: SimpleFeed
+api: 3.0.0
+version: 1.0.0
+main: Electro\SimpleFeed\Main
+author: Electro
+description: Feed yourslef or others to max food
+
+commands:
+ feed:
+  description: Feed yourslef or others to max food
+  permission: simpleheal.use
+permissions:
+  simplefeed.use:
+    description: Permission to feed yourself or others
+    default: op
+...
