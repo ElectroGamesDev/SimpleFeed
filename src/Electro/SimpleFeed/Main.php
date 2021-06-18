@@ -27,7 +27,7 @@ class Main extends PluginBase implements Listener{
                        if ($player){
                            $player->setFood(20);
                            $player->sendMessage("§aYou Have Been Fed!");
-                           $sender->sendMessage("§aYou Have Fed " . $player . "!");
+                           $sender->sendMessage("§aYou Have Fed " . $args[0] . "!");
                        }
                        else{
                            $sender->sendMessage("§cThis player does not exist");
