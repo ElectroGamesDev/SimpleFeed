@@ -9,7 +9,7 @@ description: Feed yourslef or others to max food
 commands:
  feed:
   description: Feed yourslef or others to max food
-  permission: simpleheal.use
+  permission: simplefeed.use
 permissions:
   simplefeed.use:
     description: Permission to feed yourself or others
