@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Electro\SimpleFeed;
 
-use pocketmine\Server;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 use pocketmine\plugin\PluginBase;
 
@@ -13,9 +12,6 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 
 use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerJoinEvent;
-
-use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener{
 	
@@ -23,9 +19,9 @@ class Main extends PluginBase implements Listener{
            if ($sender instanceof Player) {
                if ($cmd->getName() == "feed") {
                    if (isset($args[0])){
-                       $player = $this->getServer()->getPlayer($args[0]);
+                       $player = $this->getServer()->getPlayerExact($args[0]);
                        if ($player){
-                           $player->setFood(20);
+                           $player->getHungerManager()->setFood(20);
                            $player->sendMessage("§aYou Have Been Fed!");
                            $sender->sendMessage("§aYou Have Fed " . $args[0] . "!");
                        }
@@ -34,7 +30,7 @@ class Main extends PluginBase implements Listener{
                        }
                    }
                    else {
-                       $sender->setFood(20);
+                       $sender->getHungerManager()->setFood(20);
                        $sender->sendMessage("§aYou Have Been Fed!");
                    }
                }
