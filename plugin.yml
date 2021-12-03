@@ -1,7 +1,7 @@
 ---
 name: SimpleFeed
-api: 3.0.0
-version: 1.0.0
+api: 4.0.0
+version: 2.0.0
 main: Electro\SimpleFeed\Main
 author: Electro
 description: Feed yourslef or others to max food
